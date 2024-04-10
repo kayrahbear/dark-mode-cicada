@@ -1,0 +1,107 @@
+  :root {
+    --visibility: visible;
+    --filter: none;
+    --background-image: url("./assets/stars-black.svg");
+    --background-size: cover;
+    --font-color: black;
+    --background-color: rgba(255, 255, 255, 0.75);
+    --nypmh-visibility: visible;
+    --adult-visibility: hidden;
+    --top-margin:0;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    color: var(--font-color);
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    filter: var(--filter);
+  }
+  
+  .background {
+    max-width: 100%;
+    height: 100vh;
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    background-image: var(--background-image);
+    background-size: var(--background-size);
+  }
+  
+  .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 25px;
+    background-color: var(--background-color);
+  }
+
+  /* TITLE */
+  
+  h1 {
+    margin-top: 5rem;
+    font-family: "Inter", sans-serif;
+    font-size: 6.5rem;
+    grid-area: 3/1/4/7;
+    text-align: center;
+    user-select: none;
+  }
+  
+  /* MAIN SVG */
+  
+  .main-svg-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--top-margin);
+  }
+  
+  .main-svg-light {
+    width: max(150px, 30vw);
+    height: min(300px, 30vh);
+    rotate: 75deg;
+    visibility: var(--nymph-visibility);
+  }
+
+  .main-svg-dark {
+    width: max(150px, 30vw);
+    height: min(300px, 30vh);
+    visibility: var(--adult-visibility);
+  }
+  
+  /*dark-mode*/
+  @media (prefers-color-scheme: dark){
+    
+  :root {
+    --visibility: hidden;
+    --filter: invert(100%);
+    --background-color: rgba(255, 255, 255, 0);
+    --nymph-visibility: hidden;
+    --adult-visibility: visible;
+    --top-margin: -10rem;
+  }
+  
+  .dark-mode .overlay{
+    background-color: var(--background-color);
+    transition: all .18s ease-in;
+  }
+}
+  
+  @media only screen and (max-width: 320px) {
+    .list-item {
+      display: block;
+      margin-bottom: 4px;
+    }
+    
+  }
+  
