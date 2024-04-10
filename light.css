@@ -1,0 +1,12 @@
+:root {
+    --filter: none;
+    --background-image: url("./assets/stars-black.svg");
+    --background-size: cover;
+    --font-color: black;
+    --background-color: rgba(255, 255, 255, 0.75);
+    --nypmh-visibility: visible;
+    --adult-visibility: hidden;
+    --image-top-margin: 0;
+    --text-top-margin: -12rem;
+  }
+  

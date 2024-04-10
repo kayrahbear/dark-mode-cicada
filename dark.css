@@ -1,0 +1,16 @@
+:root {
+    --visibility: hidden;
+    --filter: invert(100%);
+    --font-color: black;
+    --background-image: url("./assets/stars-black.svg");
+    --background-color: rgba(255, 255, 255, 0);
+    --nymph-visibility: hidden;
+    --adult-visibility: visible;
+    --text-top-margin: 0;
+    --image-top-margin: -6rem;
+}
+
+/* .dark-mode .overlay {
+    background-color: var(--background-color);
+    transition: all 0.18s ease-in; */
+/* } */
